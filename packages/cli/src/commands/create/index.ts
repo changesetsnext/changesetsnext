@@ -63,12 +63,7 @@ export default async function create(
             (!filter || (filter && pkg.packageJson.name === filter))
         )
         .map((pkg) => pkg.packageJson.name);
-      console.log(
-        "[Tip] 🔥 listablePackages bump ===> ",
-        filter,
-        bump,
-        summary
-      );
+
       newChangeset = await createChangeset(
         changedPackagesName,
         listablePackages,
