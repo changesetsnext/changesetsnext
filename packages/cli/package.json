@@ -1,11 +1,11 @@
 {
-  "name": "@changesets/cli",
-  "version": "2.25.2",
+  "name": "@changesetsnext/cli",
+  "version": "1.0.1",
   "description": "Organise your package versioning and publishing to make both contributors and maintainers happy",
   "bin": {
     "changeset": "bin.js"
   },
-  "repository": "https://github.com/changesets/changesets/tree/main/packages/cli",
+  "repository": "https://github.com/changesetsnext/changesetsnext/tree/main/packages/cli",
   "files": [
     "default-files",
     "dist",
@@ -15,7 +15,7 @@
   ],
   "main": "dist/cli.cjs.js",
   "module": "dist/cli.esm.js",
-  "author": "Changesets Contributors",
+  "author": "Changesets Contributors => fork: Junean",
   "contributors": [
     "Ben Conolly",
     "Mitchell Hamilton",

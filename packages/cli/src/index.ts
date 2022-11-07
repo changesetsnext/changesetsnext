@@ -10,7 +10,7 @@ const { input, flags } = meow(
     $ changeset [command]
   Commands
     init
-    add [--empty] [--open]
+    add [--empty] [--open] [--filter <name>] [--bump <name>] [--summary <name>]
     version [--ignore] [--snapshot <?name>] [--snapshot-prerelease-template <template>]
     publish [--tag <name>] [--otp <code>] [--no-git-tag]
     status [--since <branch>] [--verbose] [--output JSON_FILE.json]
@@ -54,6 +54,15 @@ const { input, flags } = meow(
         default: true,
       },
       snapshotPrereleaseTemplate: {
+        type: "string",
+      },
+      filter: {
+        type: "string",
+      },
+      bump: {
+        type: "string",
+      },
+      summary: {
         type: "string",
       },
       // mixed type like this is not supported by `meow`

@@ -16,6 +16,8 @@ import pre from "./commands/pre";
 import tagCommand from "./commands/tag";
 import { CliOptions } from "./types";
 
+import create from "./commands/create";
+
 export async function run(
   input: string[],
   flags: { [name: string]: any },
@@ -85,6 +87,9 @@ export async function run(
       tag,
       open,
       gitTag,
+      filter,
+      bump,
+      summary,
     }: CliOptions = flags;
     const deadFlags = ["updateChangelog", "isPublic", "skipCI", "commit"];
 
@@ -107,6 +112,10 @@ export async function run(
     switch (input[0]) {
       case "add": {
         await add(cwd, { empty, open }, config);
+        return;
+      }
+      case "create": {
+        await create(cwd, { empty, open, filter, bump, summary }, config);
         return;
       }
       case "version": {
